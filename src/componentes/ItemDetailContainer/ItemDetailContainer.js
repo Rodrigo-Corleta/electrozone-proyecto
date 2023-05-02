@@ -5,24 +5,24 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     const[productsList, setProductsList] = useState(null)
-    const {Itemid} = useParams()
+    const {itemId} = useParams()
 
     useEffect(() => {
         const getItemById =() => {
             return new  Promise((resolve) => {
                 setTimeout(() => {
-                    resolve(products.find(product => product.id === Itemid))
+                    resolve(products.find(product => product.id === itemId))
                 }, 2000)
             })
         }
-        getItemById(Itemid)
+        getItemById(itemId)
         .then(product => setProductsList(product))
         .catch(error => console.log(error))
-    },[Itemid]
+    },[itemId]
     )
 
     return (
-        <div>
+        <div className="mt-20">
             {productsList ? <ItemDetail {...productsList}/> : <p>Cargando...</p>}
         </div>
     );

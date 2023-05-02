@@ -3,7 +3,7 @@
         "id": "1",
         "name": "Samsung S23 Ultra", 
         "price": 170000,
-        "category": "Teléfono",
+        "category": "Telefono",
         "description":"Samsung Galaxy S23 Ultra 12gb 512gb lavander",
         "img":"/images/catalogo/s23ultra512gb.webp"
     },
@@ -11,7 +11,7 @@
         "id":"2",
         "name": "Iphone 14 Pro Max",
         "price": 400000,
-        "category": "Teléfono", 
+        "category": "Telefono", 
         "description": "Iphone 14 Pro Max (256bg) - Negro espacial",
         "img":"/images/catalogo/iphone14promax256.webp"
     },

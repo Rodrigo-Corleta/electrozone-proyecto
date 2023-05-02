@@ -10,10 +10,10 @@ const Navbar =()=>{
         </Link>
         <ul className="flex clex-col md:flex-row justify-center w-full items-center gap-2 p-8 md:p-0 text-center pb-0">
         <li className="mx-4">
-          <Link to="/category/Notebooks-y-PC" className="text-xl hover:text-blue-800 transition-colors">Notebooks y PC</Link>
+          <Link to="/category/Notebooks y PC" className="text-xl hover:text-blue-800 transition-colors">Notebooks y PC</Link>
         </li>
         <li className="mx-4">
-          <Link to="/category/Telefonos" className="text-xl hover:text-blue-800 transition-colors">Teléfonos</Link>
+          <Link to="/category/Telefono" className="text-xl hover:text-blue-800 transition-colors">Teléfonos</Link>
         </li>
         <li className="mx-4">
           <Link to="/category/Accesorios"  className="text-xl hover:text-blue-800 transition-colors">Accesorios</Link>

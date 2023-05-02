@@ -1,0 +1,50 @@
+[
+	{ 
+        "id": "1",
+        "name": "Samsung S23 Ultra", 
+        "price": 170000,
+        "category": "Teléfono",
+        "description":"Samsung Galaxy S23 Ultra 12gb 512gb lavander",
+        "img":"/images/catalogo/s23ultra512gb.webp"
+    },
+	{ 
+        "id":"2",
+        "name": "Iphone 14 Pro Max",
+        "price": 400000,
+        "category": "Teléfono", 
+        "description": "Iphone 14 Pro Max (256bg) - Negro espacial",
+        "img":"/images/catalogo/iphone14promax256.webp"
+    },
+	{ 
+        "id":"3",
+        "name": "Asus Zenbook Duo", 
+        "price": 600000,
+        "category": "Notebooks y PC",
+        "description": "Asus Zenbook Duo Pro 14 Oled 14,5, I7, 16 gb ram, 1tb, W11",
+        "img":"/images/catalogo/asuszenbookduopro14.webp" 
+    },
+	{ 
+        "id":"4",
+        "name": "Lenovo Flex 5",
+        "price": 200000,
+        "category": "Notebooks y PC",
+        "description": "Lenovo Flex 5 i5, 8gb ram, ssd 256gb, W11",
+        "img":"/images/catalogo/lenovoflex5.webp"
+    },
+    {
+        "id":"5",
+        "name":"Sony 1000x",
+        "price":100000,
+        "category":"Accesorios",
+        "description": "Auriculares inalámbricos Sony 1000X - Negro mate",
+        "img":"/images/catalogo/sony1000x.webp"
+    },
+    {
+        "id":"6",
+        "name":"Samsung Series 7",
+        "price": 240000,
+        "category":"Televisores",
+        "description": "Televisor Samsung S7 4K 50 pulgadas LED Tizen",
+        "img":"/images/catalogo/smarttvsamsung.webp"
+    }
+]

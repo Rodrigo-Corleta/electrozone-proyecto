@@ -6,30 +6,38 @@ export const CartContext = createContext();
 const CartProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
 
-    const addItem = (item, amount) => {
-        const newItem = {
-            ...item, amount
+        const addItem = (item, amount) => {
+            const newItem = {
+                ...item, amount
+            }
+            setCartList(prev => [...prev, newItem]);
         }
-        setCartList(prev => [...prev, newItem]);
-    }
+    
+        const removeItem = (itemId) => {
+            setCartList(cartList.filter(product => product.id !== itemId)); 
+        }
 
-    const removeItem = (itemId) => {
-        setCartList(cartList.filter(product => product.id !== itemId)); 
-    }
+        const clear = () => {
+            setCartList([]);
+        }
 
-    const clear = () => {
-        setCartList([]);
-    }
+        const isInCart = (itemId) => {
+            return cartList.some(product => product.id === itemId)
+        }
 
-    const isInCart = (itemId) => {
-        return cartList.some(product => product.id === itemId)
-    }
+        const totalItems = () => {
+            return cartList.reduce((acc, product) => acc + product.amount, 0)
+        }
 
-    return (
-        <CartContext.Provider value={{addItem, removeItem, clear, isInCart}}>
-            {children}
-        </CartContext.Provider>
-    )
-}
+        const totalPrice = () => {
+            return cartList.reduce((acc, product) => acc + product.amount * product.price, 0)
+        }
+
+        return (
+            <CartContext.Provider value={{addItem, removeItem, clear, isInCart, totalItems, totalPrice, cartList}}>
+                {children}
+            </CartContext.Provider>
+        )
+    }
 
 export default CartProvider;

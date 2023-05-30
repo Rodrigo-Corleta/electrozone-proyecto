@@ -3,6 +3,7 @@ import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer
 import Navbar from "./componentes/Navbar";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import CartProvider from "./context/CartContext";
+import Cart from "./componentes/Cart/Cart";
 
 function App() {
   return (

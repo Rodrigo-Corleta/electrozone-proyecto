@@ -3,14 +3,14 @@ import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 
-const ItemDetail = ({name,price,category,description,img,stock}) => {
+const ItemDetail = ({id,name,price,category,description,img,stock}) => {
     const[quantityToAdd,setQuantityToAdd]=useState(0)
     
     const {addItem}= useContext(CartContext)
     
     const handleAddToCart=(amount)=>{
         setQuantityToAdd(amount)
-        addItem({name,price,category,description,img,stock},amount)
+        addItem({id,name,price,category,description,img,stock},amount)
     }
 
     return (

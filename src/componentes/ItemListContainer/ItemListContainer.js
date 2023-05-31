@@ -1,37 +1,28 @@
 import ItemList from "../Itemlist/ItemList";
 import { useState, useEffect } from 'react';
-import products from '../../products.json';
 import { useParams } from "react-router-dom";
+import { db } from "../../firebase/FireBaseConfig";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer =({greeting}) => {
     const [productsList,setProductsList] = useState()
     const {categoryId} = useParams()
 
     useEffect(() => {
-        
-        const getProducts =() =>{
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    if (products){
-                        if (categoryId){
-                            resolve(products.filter(product => product.category === categoryId))
-                        }else{
-                            resolve(products)
-                        }
-                        }else{
-                            reject("Error.No se pudieron cargar los productos")
-                        }
-                }, 2000);
-            })
+        const getProducts = async () =>{
+        try {
+            const itemCollection = collection(db, "products");
+            const filter = categoryId ? query(itemCollection, where("category", "==", categoryId)) : itemCollection;
+            const result = await getDocs(filter)
+            const newProductsList = result.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+            setProductsList(newProductsList);
+        } catch (error) {
+            console.log("No se pudieron cargar los productos");
         }
-        getProducts(categoryId)
-        .then((resultado) => {
-            setProductsList (resultado)
-        })
-        .catch((error) => {
-            console.log(error)        
-        })   
-    },[categoryId])
+        }
+        getProducts();
+    },[categoryId]) 
+
 
     return (
         <div className="mt-20">

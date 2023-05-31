@@ -28,28 +28,21 @@ Electrozone es una tienda en línea de artículos electrónicos como teléfonos,
 
 El proyecto sigue la siguiente estructura de archivos:
 
-> 'src/'
->
-> > 'componentes/'
-> >
-> > > 'Cart/'
-> > > 'CartItem/'
-> > > 'CartWidjet/'
-> > > 'Item/'
-> > > 'ItemCount/'
-> > > 'ItemDetail/'
-> > > 'ItemDetailContainer/'
-> > > 'ItemList/'
-> > > 'ItemListContainer/'
-> > > 'Navbar.js/'
->
-> > 'context/'
-> >
-> > > 'CartContext.js/'
->
-> > 'firebase/'
-> >
-> > > 'FireBaseConfig.js/'
->
-> > 'App.js'
-> > 'index.js'
+- src/
+  - componentes/
+    - Cart/
+    - CartItem/
+    - CartWidjet/
+    - Item/
+    - ItemCount/
+    - ItemDetail/
+    - ItemDetailContainer/
+    - ItemList/
+    - ItemListContainer/
+    - Navbar.js/
+  - context/
+    - CartContext.js/
+  - firebase/
+    - FireBaseConfig.js/
+  - App.js
+  - index.js

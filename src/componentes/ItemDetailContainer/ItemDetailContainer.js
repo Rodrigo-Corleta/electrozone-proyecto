@@ -32,17 +32,3 @@ const ItemDetailContainer = () => {
   return <div className="mt-20">{productsList ? <ItemDetail {...productsList} /> : <p>Cargando...</p>}</div>;
 };
 export default ItemDetailContainer;
-
-// useEffect(() => {
-//     const getItemById =() => {
-//         return new  Promise((resolve) => {
-//             setTimeout(() => {
-//                 resolve(products.find(product => product.id === itemId))
-//             }, 2000)
-//         })
-//     }
-//     getItemById(itemId)
-//     .then(product => setProductsList(product))
-//     .catch(error => console.log(error))
-// },[itemId]
-// )

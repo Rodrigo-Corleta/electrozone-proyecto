@@ -18,7 +18,8 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen overflow-y-auto">
+      <div className="text-2xl font-bold">Tu carrito</div>
       {cartList.map((item) => (
         <CartItem key={item.id} {...item} />
       ))}
@@ -30,7 +31,7 @@ const Cart = () => {
           Borrar carrito
         </button>
         <Link to="/checkout" className="bg-blue-500 text-white px-4 py-2 rounded m-2">
-          Checkout
+          Terminar compra
         </Link>
       </div>
     </div>

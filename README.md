@@ -7,6 +7,7 @@ Electrozone es una tienda en línea de artículos electrónicos como teléfonos,
 - Selección de productos: Amplia variedad de productos para seleccionar. Los usuarios pueden explorar entre las diferentes categorías para encontrar lo que estan buscando.
 - Detalles de productos: En cada producto se incluye una página de detalles con la imágen, descripción, categoría, precio y stock del producto. Además cuenta con un contador para elegir la cantidad de prductos que se desean comprar.
 - Carrito de compras: Los productos se pueden agregar a un carrito de compras, donde los usuarios podran ver que agregaron allí, la cantidad, precio unitario y subtotal de cada producto o conjunto de ellos que haya seleccionado, además del precio total de todos los productos y cantidades que se encentren en el carrito. También pueden eliminar un producto tanto de manera individual como borrar el carrito en su totalidad si así lo desea.
+  En casi de efectuat la compra y hacer click en Terminar compra, se verá un mensaje en el que se confirma su compra y el id de la misma
 
 ## Demo / Gif mostrando navegabilidad
 
